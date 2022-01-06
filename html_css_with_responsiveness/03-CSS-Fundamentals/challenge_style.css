@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 825px;
+  margin: 50px auto;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1.4;
@@ -13,6 +23,7 @@ h3 {
 }
 
 h2 {
+  padding: 15px;
   font-size: 22px;
   text-align: center;
   background-color: #f7f7f7;
@@ -27,6 +38,7 @@ h2 {
   font-size: 12px;
   font-weight: bold;
   color: #777;
+  margin-bottom: 20px;
 }
 
 a:link,
@@ -46,9 +58,26 @@ button {
   font-size: 20px;
   text-transform: uppercase;
   cursor: pointer;
+  width: 100%;
+  padding: 15px 0;
+  border-top: 4px solid #000;
 }
 
 button:hover {
   background-color: #fff;
   color: #000;
+}
+
+.product-details {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.product-desc {
+  list-style: square;
+  margin-left: 20px;
+}
+
+.product-desc li {
+  margin-bottom: 10px;
 }
