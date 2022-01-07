@@ -83,6 +83,7 @@ aside {
 
 /* .first-li {
   font-weight: bold;
+  display: inline;
 } */
 
 li:first-child {
@@ -91,10 +92,6 @@ li:first-child {
 
 li:last-child {
   font-weight: italic;
-}
-
-li:nth-child(2) {
-  color: red;
 }
 
 /* Misconception: this won't work */
@@ -128,6 +125,18 @@ a:active {
   font-style: italic;
 }
 
+nav {
+  text-align: center;
+}
+
+nav a:link {
+  /* background-color: lightgreen;
+  margin: 20px;
+  padding: 20px;
+
+  display: block; */
+}
+
 /* Resolving conflicts */
 #copyright {
   color: red;
@@ -139,4 +148,39 @@ a:active {
 
 .text {
   color: yellow;
+}
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/* Pseudo elements */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 10px;
+}
+
+h2 {
+  /* background-color: orange; */
+  position: relative;
+}
+
+/* Pseudo element - ::after and ::before
+They won't exists in html doc but we can create in css 
+
+::after  --> becomes the last child element of the selected element.
+::before --> becomes the first child element of the selected element.*/
+h2::after {
+  content: "TOP"; /* Mandatory property for the after and before pseudo elements */
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
 }

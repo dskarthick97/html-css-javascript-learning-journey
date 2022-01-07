@@ -27,6 +27,7 @@ h2 {
   font-size: 22px;
   text-align: center;
   background-color: #f7f7f7;
+  position: relative;
 }
 
 .price {
@@ -80,4 +81,51 @@ button:hover {
 
 .product-desc li {
   margin-bottom: 10px;
+}
+
+/* Pseudo element */
+h2::after {
+  content: "SALE";
+  display: inline-block;
+  padding: 7px 15px;
+  color: #fff;
+  background-color: #ec2f2f;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: absolute;
+  top: -17px;
+  left: -38px;
+}
+
+.product-colors li {
+  list-style: none;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+._black {
+  background-color: #000;
+}
+
+._blue {
+  background-color: #35589a;
+}
+
+._red {
+  background-color: #ff0000;
+}
+
+._yellow {
+  background-color: #ffc900;
+}
+
+._green {
+  background-color: green;
+}
+
+._brown {
+  background-color: brown;
 }
