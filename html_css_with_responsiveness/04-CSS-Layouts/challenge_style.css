@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 825px;
+  margin: 50px auto;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+article {
+  border: 4px solid #000;
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+h2 {
+  padding: 15px;
+  font-size: 22px;
+  text-align: center;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.price {
+  font-size: 22px;
+}
+
+.shipping {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #777;
+}
+
+a:link,
+a:visited {
+  color: #000;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  padding: 15px 0;
+  border-top: 4px solid #000;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.product-details {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.product-desc {
+  list-style: square;
+  margin-left: 20px;
+}
+
+.product-desc li {
+  margin-bottom: 10px;
+}
+
+/* Pseudo element */
+h2::after {
+  content: "SALE";
+  display: inline-block;
+  padding: 7px 15px;
+  color: #fff;
+  background-color: #ec2f2f;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: absolute;
+  top: -17px;
+  left: -38px;
+}
+
+.product-colors li {
+  list-style: none;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+._black {
+  background-color: #000;
+}
+
+._blue {
+  background-color: #35589a;
+}
+
+._red {
+  background-color: #ff0000;
+}
+
+._yellow {
+  background-color: #ffc900;
+}
+
+._green {
+  background-color: green;
+}
+
+._brown {
+  background-color: brown;
+}
+
+/* FLEXBOX LAYOUT */
+.price-shipping-flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product-flex-layout {
+  background-color: #ddd;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.price-shipping-flex-layout {
+  flex: 1;
+}
+
+.product-info-flex-layout {
+  flex: 1;
+}
