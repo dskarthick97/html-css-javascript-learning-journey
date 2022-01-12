@@ -13,8 +13,7 @@ body {
   border-top: 10px solid #1098ad;
   position: relative;
 }
-
-.container {
+Private .container {
   width: 900px;
   /* margin-left: auto;
   margin-right: auto; */
@@ -27,7 +26,6 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
   /* height: 80px; */
 }
 
@@ -37,7 +35,7 @@ nav {
 }
 
 article {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .post-header {
@@ -327,7 +325,7 @@ nav {
   margin-top: 5px;
 }
 
-.article-aside-flex-box {
+/* .article-aside-flex-box {
   display: flex;
   gap: 75px;
   margin-bottom: 60px;
@@ -341,4 +339,21 @@ article {
 
 aside {
   flex: 0 0 300px;
+} */
+
+/* CSS GRID */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  grid-column: 1 / -1;
+}
+
+footer {
+  grid-column: 1 / -1;
 }

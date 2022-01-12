@@ -11,6 +11,10 @@
       }
       .el--2 {
         background-color: orangered;
+
+        /*This is similar to 1 / 2. We can omit / value, if it is greater by 1. */
+        grid-column: 1;
+        grid-row: 2;
       }
       .el--3 {
         background-color: green;
@@ -30,16 +34,33 @@
       }
       .el--8 {
         background-color: crimson;
+
+        /* grid items properties */
+        /* grid-column: 2 / 3; */
+        grid-column: 1 / span 3; /* same as grid-column: 1 / 4; */
+        grid-row: 1 / 2;
       }
 
       .container--1 {
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 30px;
         margin: 40px;
 
         /* CSS GRID */
+        display: grid;
+        /* grid-template-columns: 200px 200px 1fr 1fr; */
+        /* grid-template-columns: 1fr 1fr 1fr auto; */
+        /* grid-template-rows: 300px 200px; */
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+
+        /* gap: 30px; */
+        column-gap: 20px;
+        row-gap: 40px;
+        display: none; /* removed from the page. */
       }
 
       .container--2 {
@@ -47,12 +68,28 @@
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+
+        /* Aligning tracks inside of a container:
+        distribute empty space. 
+        
+        properties ends with contents are used for aligning tracks inside 
+        the container. */
+        justify-content: center;
+        align-content: center;
+
+        /* Aligning items inside cells:
+        moving items around inside cells. */
+        justify-items: center;
+        align-items: center;
       }
     </style>
   </head>
