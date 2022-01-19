@@ -38,7 +38,74 @@
         color: #343a40;
         line-height: 1;
       }
+
+      table {
+        width: 800px;
+        margin: 100px auto;
+        font-size: 18px;
+        border-collapse: collapse;
+        /* border: 1px solid #000; */
+      }
+
+      thead th {
+        background-color: #087f5b;
+        color: #fff;
+        width: 25%;
+      }
+
+      th,
+      td {
+        /* border: 1px solid #000; */
+        padding: 16px 24px;
+        text-align: left;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #f8f9fa;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #e9ecef;
+      }
     </style>
   </head>
-  <body></body>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Chair</th>
+          <th>The Laid Back</th>
+          <th>The Worker Bee</th>
+          <th>The Chair 4/2</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>Width</th>
+          <td>80 cm</td>
+          <td>60 cm</td>
+          <td>220 cm</td>
+        </tr>
+        <tr>
+          <th>Height</th>
+          <td>100 cm</td>
+          <td>110 cm</td>
+          <td>90 cm</td>
+        </tr>
+        <tr>
+          <th>Depth</th>
+          <td>70 cm</td>
+          <td>65 cm</td>
+          <td>80 cm</td>
+        </tr>
+        <tr>
+          <th>Weight</th>
+          <td>16 kg</td>
+          <td>22 kg</td>
+          <td>80 kg</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
