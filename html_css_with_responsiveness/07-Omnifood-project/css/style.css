@@ -1,49 +1,182 @@
-/* 
------ TYPOGRAPHY SYSTEMS:
+/*****************************/
+/* HEADER */
+/*****************************/
 
-- FONT SIZES (px):
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
 
-- Font weights:
-Default: 400
-
-- Line height:
-Default: 1
-
-
------ COLORS SYSTEMS:
-
-- Primary: #e67e22
-- Tints:
-- Shades:
-- Accents:
-- Greys:
-#555
-
-
------ IMAGES SYSTEMS:
-
------ ICONS SYSTEMS:
-
------ SHADOWS SYSTEMS:
-
------ BORDER RADIUS:
-
------ WHITESPACES:
-
-- SPACING SYSTEMS (px):
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  /* Because we wanted to make the header sticky */
+  height: 9.6rem;
+  padding: 0 4.8rem;
 }
 
-body {
-  font-family: sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  color: #555;
+.logo {
+  height: 2.2rem;
+}
+
+/*****************************/
+/* NAVIGATION */
+/*****************************/
+
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  list-style: none;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.9rem;
+  color: #fff;
+  background-color: #e67e22;
+}
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/*****************************/
+/* HERO SECTION */
+/*****************************/
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  /* height: 100vh; */
+}
+
+.hero-description {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 0.3rem solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+  margin-right: 0;
+}
+
+.delivered-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
+/*****************************/
+/* HOW IT WORKS SECTION */
+/*****************************/
+
+.section-how {
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+  width: 60%;
+  /* height: 60%; */
+  padding-bottom: 60%;
+
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 45%;
+  /* height: 60%; */
+  padding-bottom: 45%;
+
+  background-color: #fae5d3;
+  z-index: -1;
+}
+
+.step-img {
+  max-width: 35%;
 }
